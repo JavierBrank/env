@@ -11,7 +11,7 @@ var express = require('express');
 var app = express();
 var xhub = require('express-x-hub');
 
-app.set('port', (process.env.PORT || 80));
+app.set('port', (process.env.PORT || 5000));
 app.listen(app.get('port'));
 
 app.use(xhub({ algorithm: 'sha1', secret: process.env.APP_SECRET }));
@@ -27,7 +27,7 @@ app.get('/', function(req, res) {
 
 app.get(['/facebook', '/instagram'], function(req, res) { 
 
-//console.log(req);  
+console.log(req);  
   if (
     req.param('hub.mode') == 'subscribe' &&
     req.param('hub.verify_token') == token

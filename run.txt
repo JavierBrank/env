@@ -1,1 +1,1 @@
-PORT=58540 APP_SECRET='a3e128419aa957f847fc37ee3faca4f1' TOKEN='34paler65' node index.js
+PORT=58540 APP_SECRET='a3e128419aa957f847fc37ee3faca4f1' TOKEN='34paler65' npm start
